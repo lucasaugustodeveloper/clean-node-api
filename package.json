@@ -24,6 +24,6 @@
     "postinstall": "npx husky install",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint:staged": "jest"
+    "lint:staged": "jest --passwithNoTests"
   }
 }
