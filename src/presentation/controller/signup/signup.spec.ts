@@ -1,7 +1,11 @@
 import { SignUpController } from './signup'
 
-import { MissingParamError, InvalidParamError, ServerError } from '../../errors'
-import { EmailValidator } from '../../protocols/emailValidator'
+import {
+  MissingParamError,
+  InvalidParamError,
+  ServerError
+} from '../../errors'
+import { EmailValidator } from '../../protocols'
 
 interface SutTypes {
   sut: SignUpController
@@ -107,7 +111,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new InvalidParamError('email'))
   })
 
-  test('should call EmailValidaor with correct email', () => {
+  test('should call EmailValidator with correct email', () => {
     const { sut, emailValidatorStub } = makeSut()
     const httpRequest = {
       body: {
