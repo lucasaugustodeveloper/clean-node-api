@@ -24,8 +24,8 @@
     "postinstall": "npx husky install",
     "test": "jest --passWithNoTests --silent --noStackTrace",
     "test:verbose": "jest --passWithNoTests --runInBand",
-    "test:unit": "npm test -- --watch -c jest-unit-config.js",
-    "test:integration": "npm test --  --runInBand --watch -c jest-integration-config.js",
+    "test:unit": "npm test -- --watch -c jest-unit-config.ts",
+    "test:integration": "npm test --  --runInBand --watch -c jest-integration-config.ts",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
   }
